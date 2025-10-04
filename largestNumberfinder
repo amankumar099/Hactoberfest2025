@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class LargestNumberFinder {
+
+    public static void main(String[] args) {
+        // Create a Scanner object to read user input
+        Scanner scanner = new Scanner(System.in);
+
+        // 1. Prompt the user for three numbers
+        System.out.println("Enter the first number (A):");
+        double numA = scanner.nextDouble(); // Read the first number
+
+        System.out.println("Enter the second number (B):");
+        double numB = scanner.nextDouble(); // Read the second number
+
+        System.out.println("Enter the third number (C):");
+        double numC = scanner.nextDouble(); // Read the third number
+
+        // 2. Determine the largest number
+        double largest;
+
+        if (numA >= numB && numA >= numC) {
+            largest = numA;
+        } else if (numB >= numA && numB >= numC) {
+            largest = numB;
+        } else {
+            largest = numC;
+        }
+
+        // 3. Print the result
+        System.out.println("\n--- Result ---");
+        System.out.println("The largest number is: " + largest);
+
+        // Close the scanner object
+        scanner.close();
+    }
+}
